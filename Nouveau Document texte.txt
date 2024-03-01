@@ -1,0 +1,144 @@
+Pierre Lafitte
+18:51
+  useEffect(() => {
+    
+    async function fetchCard(id) {
+      const card = await getCard(id)
+      setCard(card)
+    }
+
+    fetchCard(cardId)
+    // eslint-disable-next-line
+  }, [])
+Pierre Lafitte
+18:55
+import { useState, useEffect } from "react"
+import { getCard } from "../utils/functions/main"
+import { useParams } from "react-router-dom"
+import Expandable from "../components/Expandable"
+
+function CardPage() {
+  const [card, setCard] = useState(null)
+  const { cardId } = useParams()
+
+  useEffect(() => {
+    async function fetchCard(id) {
+      const card = await getCard(id)
+      setCard(card)
+    }
+
+    fetchCard(cardId)
+    // eslint-disable-next-line
+  }, [])
+
+  // console.log("card", card);
+
+  return card ? (
+    <div className="page-card contained">
+      <img className="hero-image" src={card.cover} alt={card.title} />
+      <div className="flex top-row">
+        <div>
+          <h1>{card.title}</h1>
+          <div className="location">{card.location}</div>
+        </div>
+
+        <div className="host-avatar flex ais jcc mlauto">
+          <div className="name">{card.host.name}</div>
+          <img src={card.host.picture} alt={card.host.name} />
+        </div>
+      </div>
+
+      <div className="flex ais middle-row">
+        <div className="tags flex">
+          {card.tags.map(function (tag) {
+            return (
+              <div className="tag" key={tag}>
+                {tag}
+              </div>
+            )
+          })}
+        </div>
+        <div className="stars flex mlauto">
+          {Array(parseInt(card.rating))
+            .fill()
+            .map(function (v, i) {
+              return <div className="star red" key={i}></div>
+            })}
+          {5 - parseInt(card.rating) > 0
+            ? Array(5 - parseInt(card.rating))
+                .fill()
+                .map(function (v, i) {
+                  return <div className="star gray" key={i}></div>
+                })
+            : ""}
+        </div>
+      </div>
+
+      <div className="flex jcsb">
+        <Expandable
+          className="half"
+          title="Description"
+          content={card.description}
+          direction="up"
+        />
+        <Expandable
+          className="half"
+          title="Equipements"
+          content={card.equipments}
+          direction="up"
+        />
+      </div>
+    </div>
+  ) : (
+    ""
+  )
+}
+export default CardPage
+Pierre Lafitte
+18:56
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { createGlobalStyle } from "styled-components"
+import "./assets/style.css"
+
+// pages
+import Home from "./pages/Home"
+import APropos from "./pages/APropos"
+import CardPage from "./pages/CardPage"
+
+// components
+import Header from "./components/Header"
+import Error from "./components/Error"
+
+import reportWebVitals from "./reportWebVitals"
+
+const GlobalStyle = createGlobalStyle`
+    div {
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    }
+`
+
+const couleur = "vert"
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <GlobalStyle />
+      <Header />
+
+      <Routes>
+        <Route path="*" element={<Error />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/card/:cardId" element={<CardPage />} />
+        <Route path="/a-propos" element={<APropos />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+)
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals()
