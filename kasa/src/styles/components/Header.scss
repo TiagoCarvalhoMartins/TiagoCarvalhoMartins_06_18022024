@@ -1,0 +1,32 @@
+header {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 57px 100px 57px 100px;
+
+  img {
+    margin-top: 20px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 309px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
