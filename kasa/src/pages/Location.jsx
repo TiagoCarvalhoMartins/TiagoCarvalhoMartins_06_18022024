@@ -25,10 +25,10 @@ function Location() {
           ))}
         </div>
         <div className="toggleButton">
-          <div className="descriptionToggle">
+          <div className="containerToggle">
             <Button title="Description" texte={JSONFiltered.description} />
           </div>
-          <div className="equipmentsToggle">
+          <div className="containerToggle">
             <Button
               title="Équipements"
               texte={JSONFiltered.equipments.join(', ')}

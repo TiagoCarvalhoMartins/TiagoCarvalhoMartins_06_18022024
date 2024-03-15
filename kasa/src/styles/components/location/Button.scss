@@ -2,12 +2,7 @@
   display: flex;
   justify-content: space-between;
 }
-
-.equipmentsToggle {
-  width: 584px;
-}
-
-.descriptionToggle {
+.containerToggle {
   width: 584px;
   button {
     display: flex;
@@ -33,13 +28,14 @@
     }
   }
 }
+
 .descriptionText {
   display: block;
   background-color: #f7f7f7;
   border-radius: 10px;
   height: 0px;
-  padding: 0px;
-  color: #ff6060;
+  padding: 10px;
+  color: black;
   font-size: 18px;
   font-weight: 400; // Position absolue pour la description
   top: 75%; // Place la description juste en dessous du bouton
@@ -47,18 +43,21 @@
   height: auto; // Hauteur initiale de la description
   max-height: 0px;
   overflow: hidden; // Masque le contenu qui dépasse de la description
-  transition: max-height 1.5s ease; // Transition de la hauteur;
+  transition: max-height 1.5s ease-in-out, opacity 1.5s ease; // Transition de la hauteur;
+  opacity: 0;
 
   &.active {
-    max-height: 200px;
+    max-height: 100px;
     overflow: auto;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 1;
   }
   &:not(.active) {
-    max-height: 0px; // Utilisation de la même valeur pour assurer la transition inverse
+    max-height: 0px;
+    opacity: 0; // Utilisation de la même valeur pour assurer la transition inverse
   }
 }
 
@@ -70,7 +69,7 @@
   padding-top: 18px;
   height: 156px;
   background-color: #f7f7f7;
-  color: #ff6060;
+  color: black;
   font-size: 18px;
   font-weight: 400;
 

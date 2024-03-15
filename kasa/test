@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=   , initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        background: red;
+        height: 20px;
+        padding: 5px;
+        position: relative;
+        z-index: 10;
+      }
+
+      #menu .content {
+        box-sizing: border-box;
+        max-height: 0px;
+        transition: max-height 0.15s ease-out;
+        overflow: hidden;
+        background: #d5d5d5;
+        padding: 5px 20px;
+        position: relative;
+        top: -10px;
+      }
+
+      #menu.active .content {
+        max-height: 500px;
+        transition: max-height 0.25s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <div class="header">hover me</div>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint
+          sapiente placeat architecto autem non nihil magnam reiciendis neque
+          velit, exercitationem hic, ipsam maiores in. Tempore, obcaecati.
+          Obcaecati, possimus numquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint
+          sapiente placeat architecto autem non nihil magnam reiciendis neque
+          velit, exercitationem hic, ipsam maiores in. Tempore, obcaecati.
+          Obcaecati, possimus numquam.
+        </p>
+      </div>
+    </div>
+    <script>
+      let dMenu = document.getElementById('menu')
+      document.querySelector('.header').addEventListener('click', function (e) {
+        dMenu.classList.toggle('active')
+      })
+    </script>
+  </body>
+</html>

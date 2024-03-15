@@ -11,6 +11,13 @@ function Button(props) {
     setRotate(!rotate)
     setActive(!active)
   }
+
+  const textElements = props.texte.split(', ').map((item, index) => (
+    <div key={index} className="equipmentsElement">
+      {item}
+    </div>
+  ))
+
   return (
     <div className="descriptionToggle">
       <button onClick={handleClick}>
@@ -21,9 +28,9 @@ function Button(props) {
           className={`chevronButton ${rotate ? 'rotate' : ''}`}
         />
       </button>
-      <p className={`descriptionText ${active ? 'active' : ''}`}>
-        {props.texte}
-      </p>
+      <div className={`descriptionText ${active ? 'active' : ''}`}>
+        {textElements}
+      </div>
     </div>
   )
 }
