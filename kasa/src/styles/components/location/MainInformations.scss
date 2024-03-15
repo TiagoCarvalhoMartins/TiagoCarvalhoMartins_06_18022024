@@ -1,0 +1,38 @@
+.mainInformations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .titleLocalisation {
+    h2 {
+      color: #ff6060;
+      font-size: 36px;
+      font-weight: 500;
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+
+    p {
+      color: #ff6060;
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 0px;
+    }
+  }
+
+  .seller {
+    display: flex;
+
+    p {
+      color: #ff6060;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    .imageSeller {
+      width: 64px;
+      height: 64px;
+      border-radius: 64px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.tagRating {
+  display: flex;
+
+  .tag {
+    background: #ff6060;
+    border-radius: 10px;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    line-height: 0px;
+    margin-right: 10px;
+    margin-bottom: 24px;
+
+    .tag-content {
+      font-size: 14px;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+    }
+  }
+}

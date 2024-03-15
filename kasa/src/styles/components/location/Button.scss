@@ -1,0 +1,81 @@
+.toggleButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.equipmentsToggle {
+  width: 584px;
+}
+
+.descriptionToggle {
+  width: 584px;
+  button {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff6060;
+    text-align: left;
+    color: white;
+    border: none;
+    width: 582px;
+    height: 52px;
+    border-radius: 10px;
+    font-size: 18px;
+    position: relative;
+    img {
+      height: auto;
+      width: 25px;
+      transition: transform 0.3s ease;
+    }
+    .rotate {
+      transform: rotate(-180deg);
+    }
+  }
+}
+.descriptionText {
+  display: block;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  height: 0px;
+  padding: 0px;
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 400; // Position absolue pour la description
+  top: 75%; // Place la description juste en dessous du bouton
+  left: 0; // Espacement intérieur
+  height: auto; // Hauteur initiale de la description
+  max-height: 0px;
+  overflow: hidden; // Masque le contenu qui dépasse de la description
+  transition: max-height 1.5s ease; // Transition de la hauteur;
+
+  &.active {
+    max-height: 200px;
+    overflow: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &:not(.active) {
+    max-height: 0px; // Utilisation de la même valeur pour assurer la transition inverse
+  }
+}
+
+.equipments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 18px;
+  height: 156px;
+  background-color: #f7f7f7;
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 400;
+
+  p {
+    margin-top: 0px;
+    margin-bottom: 0;
+  }
+}
