@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Slider from '../components/location/Slider'
 import MainInformations from '../components/location/MainInformations'
 import Tag from '../components/location/Tag'
+import Rate from '../components/location/Rate'
 import Button from '../components/location/Button'
 import { useParams } from 'react-router-dom'
 import JSON from '../data/data.json'
@@ -20,9 +21,14 @@ function Location() {
         <Slider data={JSONFiltered} />
         <MainInformations data={JSONFiltered} />
         <div className="tagRating">
-          {JSONFiltered.tags.map((tag) => (
-            <Tag content={tag} key={tag} />
-          ))}
+          <div className="tags">
+            {JSONFiltered.tags.map((tag) => (
+              <Tag content={tag} key={tag} />
+            ))}
+          </div>
+          <div className="rating">
+            <Rate data={JSONFiltered} />
+          </div>
         </div>
         <div className="toggleButton">
           <div className="containerToggle">

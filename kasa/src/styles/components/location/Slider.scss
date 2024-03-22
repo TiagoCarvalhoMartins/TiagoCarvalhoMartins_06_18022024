@@ -1,10 +1,26 @@
 .pictures {
   text-align: center;
+  position: relative;
 
   .slider {
     object-fit: cover;
     border-radius: 25px;
     height: 415px;
     width: 1240px;
+  }
+
+  .previousButton {
+    position: absolute;
+    top: 30%;
+    height: 150px;
+    left: 88%;
+    transform: rotate(90deg);
+  }
+  .nextButton {
+    position: absolute;
+    top: 30%;
+    height: 150px;
+    left: 0%;
+    transform: rotate(-0.25turn);
   }
 }

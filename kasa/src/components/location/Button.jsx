@@ -13,7 +13,7 @@ function Button(props) {
   }
 
   const textElements = props.texte.split(', ').map((item, index) => (
-    <div key={index} className="equipmentsElement">
+    <div key={index} className="descriptionElement">
       {item}
     </div>
   ))
