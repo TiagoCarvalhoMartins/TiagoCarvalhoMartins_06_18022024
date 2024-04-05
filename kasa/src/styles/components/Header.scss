@@ -1,5 +1,8 @@
 header {
   width: 100%;
+  @media (max-width: 400px) {
+    width: 400px;
+  }
 }
 
 .container {
@@ -7,9 +10,22 @@ header {
   flex-direction: row;
   justify-content: space-between;
   margin: 57px 100px 57px 100px;
+  @media (max-width: 400px) {
+    margin: 20px 5px 20px 5px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .headerActive {
+    text-decoration: underline;
+  }
 
   img {
     margin-top: 20px;
+    @media (max-width: 400px) {
+      max-width: 125px;
+      margin-top: 0;
+    }
   }
 
   ul {
@@ -17,6 +33,12 @@ header {
     list-style: none;
     justify-content: space-around;
     width: 309px;
+    @media (max-width: 400px) {
+      margin-right: 0px;
+      max-width: 50%;
+      padding: 0;
+      justify-content: baseline;
+    }
   }
 
   a {
@@ -28,5 +50,8 @@ header {
     color: black;
     font-size: 24px;
     font-weight: 700;
+    @media (max-width: 400px) {
+      font-size: 18px;
+    }
   }
 }

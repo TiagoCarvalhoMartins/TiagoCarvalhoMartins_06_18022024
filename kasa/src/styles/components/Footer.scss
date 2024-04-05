@@ -8,6 +8,11 @@ footer {
   margin-bottom: 0px;
   margin-top: 50px;
   width: 100%;
+  @media (max-width: 400px) {
+    margin-top: 10px;
+    max-width: 400px;
+    width: 400px;
+  }
 
   .kasa-logo {
     width: 122px;
@@ -17,5 +22,8 @@ footer {
   p {
     color: white;
     font-size: 24px;
+    @media (max-width: 400px) {
+      text-align: center;
+    }
   }
 }

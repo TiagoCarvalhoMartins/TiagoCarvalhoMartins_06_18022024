@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 400px) {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   .titleLocalisation {
     h2 {
@@ -23,6 +28,11 @@
 
   .seller {
     display: flex;
+    @media (max-width: 400px) {
+      position: absolute;
+      top: 115%;
+      left: 43%;
+    }
 
     p {
       color: #ff6060;

@@ -2,18 +2,27 @@
   text-align: center;
   position: relative;
 
+  @media (max-width: 400px) {
+    max-width: 370px;
+    margin-top: 0;
+  }
+
   .slider {
     object-fit: cover;
     border-radius: 25px;
     height: 415px;
     width: 1240px;
+    @media (max-width: 400px) {
+      max-width: 370px;
+      margin-top: 0;
+    }
   }
 
   .previousButton {
     position: absolute;
     top: 40%;
     height: 75px;
-    left: 93%;
+    left: 77%;
     transform: rotate(90deg);
   }
   .nextButton {

@@ -26,9 +26,7 @@ function Location() {
               <Tag content={tag} key={tag} />
             ))}
           </div>
-          <div className="rating">
-            <Rate data={JSONFiltered} />
-          </div>
+          <Rate data={JSONFiltered} />
         </div>
         <div className="toggleButton">
           <div className="containerToggle">

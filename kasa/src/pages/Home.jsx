@@ -13,7 +13,7 @@ function Home() {
       <Header />
       <div className="banner">
         <img src={banner} alt="bannière" />
-        <h2 class="banner__text">Chez vous, partout et ailleurs</h2>
+        <h2 className="banner__text">Chez vous, partout et ailleurs</h2>
       </div>
       <div className="container_card">
         {JSON.map((location) => (

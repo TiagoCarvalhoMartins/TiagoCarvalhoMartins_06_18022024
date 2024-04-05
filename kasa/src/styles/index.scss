@@ -4,22 +4,54 @@
     url('../assets/fonts/static/Montserrat-Regular.ttf') format('truetype');
 }
 
+html {
+  height: 100%;
+  @media (max-width: 400px) {
+    width: 400px;
+  }
+}
+#root {
+  @media (max-width: 400px) {
+    width: 400px;
+  }
+}
+
 .body {
   font-family: 'Montserrat';
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 400px) {
+    align-items: flex-start;
+    width: 400px;
+  }
 
   .banner {
     width: 1240px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     text-align: center;
+    @media (max-width: 400px) {
+      max-width: 400px;
+      text-align: start;
+      width: 370px;
+    }
 
     img {
+      width: 1240px;
+      height: 223px;
+      object-fit: cover;
       border-radius: 25px;
       filter: brightness(0.5);
+
+      @media (max-width: 400px) {
+        margin-bottom: 0px;
+        max-width: 400px;
+        width: 370px;
+        height: 150px;
+      }
     }
 
     .banner__text {
@@ -29,6 +61,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
+      @media (max-width: 400px) {
+        font-size: 33px;
+        width: 300px;
+        left: 50%;
+        text-align: start;
+      }
     }
   }
 
@@ -41,5 +79,12 @@
     border-radius: 25px;
     margin: 50px 100px 0px 100px;
     padding: 56px 30px 0px 30px;
+    @media (max-width: 400px) {
+      width: 370px;
+      max-width: 400px;
+      margin: 0px 0px 0px 15px;
+      padding: 0;
+      justify-content: flex-start;
+    }
   }
 }

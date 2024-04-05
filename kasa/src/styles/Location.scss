@@ -1,3 +1,56 @@
+html {
+  @media (max-width: 400px) {
+    width: 400px;
+  }
+}
+#root {
+  @media (max-width: 400px) {
+    width: 400px;
+  }
+}
+body {
+  margin: 0;
+  @media (max-width: 400px) {
+    width: 400px;
+  }
+}
+
 .container_location {
   margin: 0 103px 20px 103px;
+
+  @media (max-width: 400px) {
+    margin: 0 0px 0px 10px;
+    width: 400px;
+  }
+  .toggleButton {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    @media (max-width: 400px) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-top: 40px;
+    }
+    .descriptionToggle {
+      button {
+        width: 584px;
+        @media (max-width: 400px) {
+          width: 370px;
+        }
+      }
+      .descriptionText {
+        width: 565px;
+        @media (max-width: 400px) {
+          width: 370px;
+        }
+      }
+      .descriptionElement {
+        width: 565px;
+        @media (max-width: 400px) {
+          width: 370px;
+        }
+      }
+    }
+  }
 }

@@ -3,6 +3,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  @media (max-width: 400px) {
+    width: 370px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   .tags {
     display: flex;
@@ -18,6 +23,9 @@
       text-align: center;
       line-height: 0px;
       margin-right: 10px;
+      @media (max-width: 400px) {
+        width: 100px;
+      }
 
       .tag-content {
         font-size: 14px;
