@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import '../../styles/components/location/Slider.scss'
-import chevronGauche from '../../assets/chevron-gauche.svg'
-import chevronDroite from '../../assets/chevron-droite.svg'
+import chevron from '../../assets/fleche-vers-le-haut.svg'
 
 function Slider(props) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -23,7 +22,7 @@ function Slider(props) {
   return (
     <div className="pictures">
       <img
-        src={chevronGauche}
+        src={chevron}
         alt="bouton précédente"
         className="previousButton"
         onClick={goToPreviousSlide}
@@ -34,7 +33,7 @@ function Slider(props) {
         className="slider"
       />
       <img
-        src={chevronDroite}
+        src={chevron}
         alt="bouton suivant"
         className=" nextButton"
         onClick={goToNextSlide}

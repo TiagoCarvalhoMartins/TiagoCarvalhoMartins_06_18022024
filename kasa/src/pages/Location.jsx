@@ -5,7 +5,7 @@ import Slider from '../components/location/Slider'
 import MainInformations from '../components/location/MainInformations'
 import Tag from '../components/location/Tag'
 import Rate from '../components/location/Rate'
-import Button from '../components/location/Button'
+import Button from '../components/Button'
 import { useParams } from 'react-router-dom'
 import JSON from '../data/data.json'
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import chevron from '../../assets/fleche-vers-le-haut.svg'
-import '../../styles/components/location/Button.scss'
+import chevron from '../assets/fleche-vers-le-haut.svg'
+import '../styles/components/Button.scss'
 
 function Button(props) {
   const [toggle, setToggle] = useState(false)
@@ -12,11 +12,7 @@ function Button(props) {
     setActive(!active)
   }
 
-  const textElements = props.texte.split(', ').map((item, index) => (
-    <div key={index} className="descriptionElement">
-      {item}
-    </div>
-  ))
+  const textElement = <div className="descriptionElement">{props.texte}</div>
 
   return (
     <div className="descriptionToggle">
@@ -29,7 +25,7 @@ function Button(props) {
         />
       </button>
       <div className={`descriptionText ${active ? 'active' : ''}`}>
-        {textElements}
+        {textElement}
       </div>
     </div>
   )
