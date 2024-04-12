@@ -1,18 +1,18 @@
 .rating {
-  @media (max-width: 400px) {
+  @media (max-width: 767px) {
     margin-top: 10px;
   }
   .starFull {
     font-size: 40px;
     color: #ff6060;
-    @media (max-width: 400px) {
+    @media (max-width: 767px) {
       font-size: 25px;
     }
   }
   .starEmpty {
     font-size: 40px;
     color: #e3e3e3;
-    @media (max-width: 400px) {
+    @media (max-width: 767px) {
       font-size: 25px;
     }
   }

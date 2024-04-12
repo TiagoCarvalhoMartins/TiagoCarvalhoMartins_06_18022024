@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import chevron from '../assets/fleche-vers-le-haut.svg'
-import '../styles/components/Button.scss'
+import '../styles/components/Collapse.scss'
 
-function Button(props) {
+function Collapse(props) {
   const [toggle, setToggle] = useState(false)
   const [active, setActive] = useState(false)
   const [rotate, setRotate] = useState(false)
@@ -31,4 +31,4 @@ function Button(props) {
   )
 }
 
-export default Button
+export default Collapse

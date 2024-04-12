@@ -11,9 +11,13 @@
     object-fit: cover;
     border-radius: 25px;
     height: 415px;
-    width: 1240px;
-    @media (max-width: 400px) {
-      max-width: 370px;
+    width: 100%;
+    @media (max-width: 767px) {
+      max-width: 90%;
+      margin-top: 0;
+    }
+    @media (max-width: 1023px) {
+      max-width: 90%;
       margin-top: 0;
     }
   }
@@ -22,14 +26,32 @@
     position: absolute;
     top: 40%;
     height: 75px;
-    left: 77%;
-    transform: rotate(90deg);
+    left: 0%;
+    transform: rotate(270deg);
+    @media (max-width: 1023px) {
+      left: 5%;
+    }
+    @media (max-width: 767px) {
+      left: 5%;
+    }
   }
   .nextButton {
     position: absolute;
     top: 40%;
     height: 75px;
-    left: 0%;
-    transform: rotate(-0.25turn);
+    left: 92%;
+    transform: rotate(90deg);
+    @media (max-width: 1023px) {
+      left: 87%;
+    }
+    @media (max-width: 767px) {
+      left: 81%;
+    }
+  }
+  .imageCounter {
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
   }
 }

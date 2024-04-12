@@ -2,24 +2,41 @@ import '../styles/Location.scss'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Slider from '../components/Slider'
-import MainInformations from '../components/MainInformations'
 import Tag from '../components/Tag'
 import Rate from '../components/Rate'
-import Button from '../components/Button'
+import Collapse from '../components/Collapse'
 import { useParams } from 'react-router-dom'
 import JSON from '../data/data.json'
+import Error from './Error'
 
 function Location() {
   let params = useParams()
   const JSONFiltered = JSON.find((location) => location.id === params.id)
   console.log(JSONFiltered)
 
+  if (!JSONFiltered) {
+    return <Error />
+  }
+
   return (
     <div className="body">
       <Header />
       <div className="container_location">
         <Slider data={JSONFiltered} />
-        <MainInformations data={JSONFiltered} />
+        <div className="mainInformations">
+          <div className="titleLocalisation">
+            <h2>{JSONFiltered.title}</h2>
+            <p>{JSONFiltered.location}</p>
+          </div>
+          <div className="seller">
+            <p>{JSONFiltered.host.name}</p>
+            <img
+              src={JSONFiltered.host.picture}
+              alt="vendeur"
+              className="imageSeller"
+            />
+          </div>
+        </div>
         <div className="tagRating">
           <div className="tags">
             {JSONFiltered.tags.map((tag) => (
@@ -30,10 +47,10 @@ function Location() {
         </div>
         <div className="toggleButton">
           <div className="containerToggle">
-            <Button title="Description" texte={JSONFiltered.description} />
+            <Collapse title="Description" texte={JSONFiltered.description} />
           </div>
           <div className="containerToggle">
-            <Button
+            <Collapse
               title="Équipements"
               texte={JSONFiltered.equipments.join(', ')}
             />

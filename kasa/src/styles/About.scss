@@ -1,23 +1,31 @@
 .toggleButton {
   flex-direction: column;
-  width: 1000px;
-  @media (max-width: 400px) {
-    width: 400px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    align-items: center;
+  }
+  @media (max-width: 1023px) {
+    width: 100%;
     align-items: center;
   }
 
   .descriptionToggle {
     margin-bottom: 10px;
-    @media (max-width: 400px) {
-      margin-top: 20px;
+    width: 100%;
+    @media (max-width: 767px) {
+      padding-left: 2%;
+      margin: 20px auto auto auto;
+    }
+    @media (max-width: 1023px) {
+      padding-left: 2%;
+      margin: 20px auto auto auto;
     }
   }
 }
 
 .body {
   font-family: 'Montserrat';
-  display: flex;
-  flex-direction: column;
 
   .banner {
     img {
@@ -26,23 +34,23 @@
   }
 
   button {
-    width: 1000px;
+    width: 45%;
     font-size: 24px;
-    @media (max-width: 400px) {
-      width: 370px;
+    @media (max-width: 767px) {
+      width: 97%;
     }
   }
 
   .descriptionText {
-    width: 1000px;
-    @media (max-width: 400px) {
-      width: 365px;
+    width: 45%;
+    @media (max-width: 767px) {
+      width: 97%;
     }
   }
   .descriptionElement {
-    width: 1000px;
-    @media (max-width: 400px) {
-      width: 365px;
+    width: 45%;
+    @media (max-width: 767px) {
+      width: 97%;
     }
   }
 }
