@@ -1,4 +1,4 @@
-import '../../styles/components/location/MainInformations.scss'
+import '../styles/components/MainInformations.scss'
 
 function MainInformations(props) {
   return (

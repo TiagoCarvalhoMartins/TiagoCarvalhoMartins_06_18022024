@@ -1,4 +1,4 @@
-import '../../styles/components/location/Rate.scss'
+import '../styles/components/Rate.scss'
 
 function Rate(props) {
   const rating = parseInt(props.data.rating)

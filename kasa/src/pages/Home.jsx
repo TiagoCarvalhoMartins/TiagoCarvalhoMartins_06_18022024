@@ -1,7 +1,8 @@
 import Header from '../components/Header'
-import banner from '../assets/banner.png'
+import Banner from '../components/Banner'
 import Card from '../components/Card'
 import Footer from '../components/Footer'
+import bannerImage from '../assets/banner.png'
 import '../styles/index.scss'
 import JSON from '../data/data.json'
 
@@ -11,10 +12,7 @@ function Home() {
   return (
     <div className="body">
       <Header />
-      <div className="banner">
-        <img src={banner} alt="bannière" />
-        <h2 className="banner__text">Chez vous, partout et ailleurs</h2>
-      </div>
+      <Banner src={bannerImage} texte="Chez vous, partout et ailleurs" />
       <div className="container_card">
         {JSON.map((location) => (
           <Card

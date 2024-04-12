@@ -1,16 +1,15 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
-import banner from '../assets/bannerAbout.png'
+import Banner from '../components/Banner'
+import bannerImage from '../assets/bannerAbout.png'
 import '../styles/About.scss'
 
 function About() {
   return (
     <div className="body">
       <Header />
-      <div className="banner">
-        <img src={banner} alt="bannière" />
-      </div>
+      <Banner src={bannerImage} />
       <div className="toggleButton">
         <div className="containerToggle">
           <Button

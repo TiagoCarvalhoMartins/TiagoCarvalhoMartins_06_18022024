@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import '../../styles/components/location/Slider.scss'
-import chevron from '../../assets/fleche-vers-le-haut.svg'
+import '../styles/components/Slider.scss'
+import chevron from '../assets/fleche-vers-le-haut.svg'
 
 function Slider(props) {
   const [currentIndex, setCurrentIndex] = useState(0)
