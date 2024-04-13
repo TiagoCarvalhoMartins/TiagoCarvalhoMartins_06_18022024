@@ -12,17 +12,19 @@ function Home() {
   return (
     <div className="body">
       <Header />
-      <Banner src={bannerImage} texte="Chez vous, partout et ailleurs" />
-      <div className="container_card">
-        {JSON.map((location) => (
-          <Card
-            title={location.title}
-            cover={location.cover}
-            id={location.id}
-            key={location.id}
-          />
-        ))}
-      </div>
+      <main>
+        <Banner src={bannerImage} texte="Chez vous, partout et ailleurs" />
+        <div className="container_card">
+          {JSON.map((location) => (
+            <Card
+              title={location.title}
+              cover={location.cover}
+              id={location.id}
+              key={location.id}
+            />
+          ))}
+        </div>
+      </main>
       <Footer />
     </div>
   )

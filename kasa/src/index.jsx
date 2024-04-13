@@ -5,7 +5,6 @@ import Home from './pages/Home'
 import Location from './pages/Location'
 import About from './pages/About'
 import Error from './pages/Error'
-import './styles/index.scss'
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement)
 

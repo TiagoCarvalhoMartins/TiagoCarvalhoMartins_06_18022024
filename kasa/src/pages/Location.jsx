@@ -21,7 +21,7 @@ function Location() {
   return (
     <div className="body">
       <Header />
-      <div className="container_location">
+      <main>
         <Slider data={JSONFiltered} />
         <div className="mainInformations">
           <div className="titleLocalisation">
@@ -56,7 +56,7 @@ function Location() {
             />
           </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   )

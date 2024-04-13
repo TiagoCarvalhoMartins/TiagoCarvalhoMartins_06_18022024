@@ -12,8 +12,19 @@
   flex-direction: column;
   align-items: center;
 
+  main {
+    max-width: 1023px;
+    margin: 0;
+    @media (max-width: 767px) {
+      max-width: 767px;
+    }
+    @media (max-width: 1023px) {
+      max-width: 98%;
+    }
+  }
+
   .banner {
-    max-width: 1024px;
+    max-width: 1023px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -22,11 +33,11 @@
     @media (max-width: 767px) {
       max-width: 767px;
       text-align: start;
-      width: 95%;
+      width: 100%;
     }
     @media (max-width: 1023px) {
-      max-width: 98%;
-      width: 95%;
+      max-width: 100%;
+      width: 100%;
     }
     img {
       max-width: 1024px;
@@ -57,7 +68,7 @@
       transform: translate(-50%, -50%);
       color: white;
       @media (max-width: 767px) {
-        font-size: 33px;
+        font-size: 25px;
         width: 70%;
         left: 50%;
         text-align: start;
@@ -74,7 +85,7 @@
     border-radius: 25px;
     padding: 56px 30px 0px 30px;
     @media (max-width: 767px) {
-      width: 95%;
+      width: 100%;
       max-width: 767px;
       margin: auto;
       padding: 0;
