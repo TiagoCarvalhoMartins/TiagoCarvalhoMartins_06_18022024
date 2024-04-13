@@ -106,8 +106,8 @@ main {
         @media (max-width: 767px) {
           width: 97%;
         }
-        @media (max-width: 1023px) {
-          width: 97%;
+        @media (max-width: 1023px) and (min-width: 767px) {
+          width: 85%;
         }
       }
       .descriptionElement {
