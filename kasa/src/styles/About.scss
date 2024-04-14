@@ -66,19 +66,21 @@ main {
   }
 
   .descriptionText {
-    width: 100%;
+    width: 98%;
     @media (max-width: 1023px) {
-      max-width: 100%;
+      max-width: 95%;
       width: 98%;
     }
     @media (max-width: 767px) {
-      width: 97%;
+      max-width: 100%;
+      width: 100%;
     }
   }
   .descriptionElement {
-    width: 45%;
+    max-width: 100%;
     @media (max-width: 767px) {
-      width: 97%;
+      max-width: 100%;
+      width: 100%;
     }
   }
 }
